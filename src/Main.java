@@ -35,14 +35,26 @@ public class Main {
 
 
         // ----- Task 2 -------
-        System.out.println("Enter the number of the month:");
-        int monthNumber = scanner.nextInt();
-        switch (monthNumber) {
-            case 12, 1, 2 -> System.out.println("Winter");
-            case 3, 4, 5 -> System.out.println("Spring");
-            case 6, 7, 8 -> System.out.println("Summer");
-            case 9, 10, 11 -> System.out.println("Autumn");
-            default -> System.out.println("Wrong month number!");
+//        System.out.println("Enter the number of the month:");
+//        int monthNumber = scanner.nextInt();
+//        switch (monthNumber) {
+//            case 12, 1, 2 -> System.out.println("Winter");
+//            case 3, 4, 5 -> System.out.println("Spring");
+//            case 6, 7, 8 -> System.out.println("Summer");
+//            case 9, 10, 11 -> System.out.println("Autumn");
+//            default -> System.out.println("Wrong month number!");
+//        }
+
+
+        // ----- Task 3 ------
+        System.out.println("Name of the month:");
+        String monthName = scanner.nextLine();
+
+        switch (monthName) {
+            case "january", "march", "may", "july", "august", "october", "december" -> System.out.println(31);
+            case "april", "june", "september", "november" -> System.out.println(30);
+            case "february" -> System.out.println("28 or 29");
+            default -> System.out.println("Wrong month name!");
         }
     }
 }
