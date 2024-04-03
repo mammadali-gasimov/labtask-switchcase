@@ -47,14 +47,30 @@ public class Main {
 
 
         // ----- Task 3 ------
-        System.out.println("Name of the month:");
-        String monthName = scanner.nextLine();
+//        System.out.println("Name of the month:");
+//        String monthName = scanner.nextLine();
+//
+//        switch (monthName) {
+//            case "january", "march", "may", "july", "august", "october", "december" -> System.out.println(31);
+//            case "april", "june", "september", "november" -> System.out.println(30);
+//            case "february" -> System.out.println("28 or 29");
+//            default -> System.out.println("Wrong month name!");
+//        }
 
-        switch (monthName) {
-            case "january", "march", "may", "july", "august", "october", "december" -> System.out.println(31);
-            case "april", "june", "september", "november" -> System.out.println(30);
-            case "february" -> System.out.println("28 or 29");
-            default -> System.out.println("Wrong month name!");
+
+        // ------ Task 4 -------
+        System.out.println("Enter number bigger than 1:");
+        int number = scanner.nextInt();
+
+        while (number < 1) {
+            System.out.println("Enter number bigger than 1:");
+            number = scanner.nextInt();
+        }
+
+        switch (number) {
+            case 1, 2, 3, 4, 5 -> System.out.println("1 - 5 arasindadir");
+            case 6, 7, 8, 9, 10 -> System.out.println("6 - 10 arasindadir");
+            default -> System.out.println("10 boyukdur");
         }
     }
 }
